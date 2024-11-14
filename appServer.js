@@ -1,3 +1,13 @@
+/**
+ *  Name: Edale Miguel
+ *  Date: November 13, 2024
+ * 
+ *  This code sets up a simple Express server for managing appointments, medications, and health logs 
+ *  in a health care tracking system. It includes routes to retrieve and add data for each category, 
+ *  along with basic error handling and middleware for parsing JSON requests. The server runs on port 3000 
+ * and serves static files from the 'public' directory.
+ */
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./database'); 

@@ -1,4 +1,19 @@
-// Function to submit appointment data to the backend
+/** 
+ *   Name: Edale Miguel 
+ *   Date: November 13, 2024
+ * 
+ *   This code allows users to submit and view appointments through the frontend. The submitAppointment 
+ *   function sends appointment data to the backend, while displayAppointments fetches and displays the 
+ *   saved appointments on the page. If any errors occur, the handleError function displays a user-friendly error message.
+ * */
+
+
+
+/**
+ * Submit appointment data to the backend.
+ * Sends the appointment details (date, time, description) to the server and adds it to the appointments list.
+ * If successful, the list is refreshed to show the latest appointment.
+ */
 function submitAppointment() {
     const date = document.getElementById("appointment-date").value;
     const time = document.getElementById("appointment-time").value;
@@ -25,7 +40,10 @@ function submitAppointment() {
     });
 }
 
-// Function to display appointments on the frontend
+/**
+ * Fetch and display the list of appointments.
+ * Retrieves all saved appointments from the server and shows them in a list on the page.
+ */
 function displayAppointments() {
     fetch('http://localhost:3000/appointments')
         .then(response => response.json())
@@ -44,14 +62,22 @@ function displayAppointments() {
         });
 }
 
-// Handle errors
+/**
+ * Handle errors by displaying a message to the user.
+ * Shows the error message in a designated section of the page.
+ * 
+ * @param {string} message - The error message to be displayed.
+ */
 function handleError(message) {
     const errorDiv = document.getElementById('error-message');
     errorDiv.textContent = message;
     errorDiv.style.display = 'block';
 }
 
-// Populate the list when the page loads
+/**
+ * Populate the list of appointments when the page loads.
+ * Calls the displayAppointments function to show any existing appointments.
+ */
 window.onload = function() {
     displayAppointments(); 
 };

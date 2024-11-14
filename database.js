@@ -1,3 +1,12 @@
+/** 
+ *  Name: Edale Miguel
+ *  Date: November 13, 2024
+ * 
+ *  This code connects to an SQLite database and creates three tables for storing health-related data: 
+ *  appointments, medications, and health logs. 
+ */
+
+
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('./myhealthtracker.db', (err) => {
     if (err) {

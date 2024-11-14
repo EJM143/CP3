@@ -1,5 +1,20 @@
+/**
+ * Name: Edale Miguel
+ * Date: November 13, 2024
+ * 
+ * This JavaScript file adds interactivity to the "Health Care Tracker" app. It handles navigation between 
+ * sections like Home, Appointments, Medications, and Health Logs, and toggles visibility for forms to 
+ * add new entries. It also manages data submission for appointments, medications, and health logs.
+ */
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
    
+   /**
+    * Shows the section you want by its ID and hides the others.
+    * @param {string} sectionId - The ID of the section to show.
+    */
     function showSection(sectionId) {
         const sections = document.querySelectorAll('.section-content');
         sections.forEach(section => {
@@ -16,7 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("medications-link").addEventListener("click", () => showSection("medications"));
     document.getElementById("healthLog-link").addEventListener("click", () => showSection("healthLog"));
 
-    // Function to toggle form visibility
+    /**
+    * Shows or hides the form based on its ID.
+    * @param {string} formId - The ID of the form to toggle.
+    */
     function toggleForm(formId) {
         const form = document.getElementById(formId);
         form.classList.toggle("hidden");
@@ -42,7 +60,9 @@ let appointments = [];
 let medications = [];
 let healthLogs = [];
 
-// Function to handle appointment form submission
+/** 
+ * Function to handle appointment form submission
+ */
 function submitAppointment() {
     const date = document.getElementById("appointment-date").value;
     const time = document.getElementById("appointment-time").value;
@@ -56,7 +76,9 @@ function submitAppointment() {
     toggleForm("appointment-form");
 }
 
-// Function to display appointments in a table
+/**
+ * Function to display appointments in a table
+ */
 function displayAppointments() {
     const appointmentsSection = document.getElementById("appointments");
     
@@ -89,6 +111,9 @@ function displayAppointments() {
     appointmentsSection.appendChild(table);
 }
 
+/**
+ * Function to handle medication form submission
+ */
 function submitMedication() {
     const name = document.getElementById("medication-name").value;
     const dosage = document.getElementById("medication-dosage").value;
@@ -102,7 +127,9 @@ function submitMedication() {
     alert("Medication saved!");
     toggleForm("medication-form");
 }
-
+/**
+ * Function to display medications in a table
+ */
 function displayMedications() {
     const medicationsSection = document.getElementById("medications");
 
@@ -138,7 +165,9 @@ function displayMedications() {
     medicationsSection.appendChild(table);
 }
 
-// Function to handle health log form submission
+/** 
+ * Function to handle health log form submission
+ */
 function submitHealthLog() {
     const date = document.getElementById("health-log-date").value; 
     const notes = document.getElementById("health-log-notes").value;
@@ -153,7 +182,9 @@ function submitHealthLog() {
     toggleForm("health-log-form");
 }
 
-// Function to display health logs in a table
+/** 
+ *  Function to display health logs in a table
+ */
 function displayHealthLogs() {
     const healthLogSection = document.getElementById("healthLog");
     healthLogSection.innerHTML = '<h2>Your Health Logs</h2>';
