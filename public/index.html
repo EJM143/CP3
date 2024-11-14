@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Care Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <h1>Health Care Tracker</h1>
+            <nav>
+                <ul>
+                    <li><button id="home-link">Home</button></li>
+                    <li><button id="appointments-link">Appointments</button></li>
+                    <li><button id="medications-link">Medications</button></li>
+                    <li><button id="healthLog-link">Health Log</button></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="auth-links">
+            <a href="#" id="sign-in-link">Sign In</a> |
+            <a href="#" id="sign-out-link">Sign Out</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Home Section -->
+        <section id="home" class="section-content">
+            <h2>Welcome to Health Care Tracker</h2>
+            <p>Track your appointments, medications, and health progress all in one place!</p>
+            <p>To get started, sign in and keep your health management organized.</p>
+        </section>
+
+        <!-- Appointments Section -->
+        <section id="appointments" class="section-content">
+            <h2>Your Appointments</h2>
+            <p>Your upcoming appointments will be listed here. Stay on top of your health visits.</p>
+        </section>
+
+        <!-- Medications Section -->
+        <section id="medications" class="section-content">
+            <h2>Your Medications</h2>
+            <p>Manage your medication list and keep track of your prescriptions here.</p>
+        </section>
+
+        <!-- Health Log Section -->
+        <section id="healthLog" class="section-content">
+            <h2>Your Health Log</h2>
+            <p>Monitor your health progress, logs, and updates to stay informed.</p>
+        </section>
+
+        <section id="form" class="form-section">
+            <!-- Appointment Form -->
+            <div id="appointment-form" class="form-container">
+                <h2>Add Appointment</h2>
+                <input type="date" id="appointment-date" placeholder="Date" required>
+                <input type="time" id="appointment-time" placeholder="Time" required>
+                <input type="text" id="appointment-description" placeholder="Description" required>
+                <button onclick="submitAppointment()">Submit</button>
+            </div>
+        
+            <!-- Medication Form -->
+            <div id="medication-form" class="form-container hidden">
+                <h2>Add Medication</h2>
+                <input type="text" id="medication-name" placeholder="Medication Name" required>
+                <input type="text" id="medication-dosage" placeholder="Dosage" required>
+                <input type="text" id="medication-frequency" placeholder="Frequency" required>
+                <input type="date" id="medication-start-date" placeholder="Start Date" required> 
+                <button onclick="submitMedication()">Submit</button>
+            </div>
+        
+            <!-- Health Log Form -->
+            <div id="health-log-form" class="form-container hidden">
+                <h2>Add Health Log</h2>
+                <input type="date" id="health-log-date" placeholder="Date" required>
+                <textarea id="health-log-notes" placeholder="Health Notes" required></textarea>
+                <button onclick="submitHealthLog()">Submit</button>
+            </div>
+        </section>
+        
+
+        
+        <script src="./appServer.js"></script>
+        
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Add Appointment, Add Medication, Add Health Log Buttons -->
+        <div class="add-buttons">
+            <button id="add-appointment-button">Add Appointment</button>
+            <button id="add-medication-button">Add Medication</button>
+            <button id="add-health-log-button">Add Health Log</button>
+        </div>
+
+        <p>&copy; 2024 Health Care Tracker | All rights reserved</p>
+    </footer>
+
+    <!-- External JavaScript File -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

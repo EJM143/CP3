@@ -1,0 +1,195 @@
+/* General Styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFF8E1; 
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+header {
+    background-color: #B58D6E; 
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: white; 
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav ul li button:hover {
+    color: #F2A77E;
+}
+
+/* Sign-In and Sign-Out Links */
+#auth-links {
+    margin-top: 10px;
+    color: white;
+    font-size: 1.1em;
+}
+
+#sign-in-link, #sign-out-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+#sign-in-link:hover, #sign-out-link:hover {
+    color: #F2A77E; 
+}
+
+/* Main Content Styling */
+main {
+    flex: 1; 
+    padding: 20px;
+}
+
+/* Section Content Styling */
+.section-content {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Sign-In Section */
+#sign-in {
+    padding: 40px 20px;
+    background-color: #F5E1C0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Form Container Styling */
+.form-container {
+    background-color: #FFF8E1;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Footer Section */
+footer {
+    background-color: #B58D6E; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+/* Add Buttons - Flexbox Layout */
+.add-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px; 
+}
+
+/* Button Styles with Brown Shades */
+.add-buttons button {
+    background-color: #8B5E3C; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+/* Hover Effect for Buttons */
+.add-buttons button:hover {
+    background-color: #6F4F1E; 
+}
+
+/* Focus effect for accessibility */
+.add-buttons button:focus {
+    outline: 2px solid #4E3629; 
+}
+
+/* Form Elements */
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #4A4A4A;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #9E8B6E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #B88C5D; 
+}
+
+p {
+    text-align: center;
+    color: #4A4A4A;
+}
+
+a {
+    color: #6E4B3A; 
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
